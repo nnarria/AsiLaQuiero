@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Mvv-dN-qI9">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="opD-ER-ueg">
+            <objects>
+                <viewController id="hsz-q7-1Zl" customClass="ViewController" customModule="AsiLaQuiero" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V26-5Q-NAC"/>
+                        <viewControllerLayoutGuide type="bottom" id="gAm-7e-tja"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nyq-Cg-Wrk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pizzería" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irL-ph-dGD">
+                                <rect key="frame" x="130" y="154" width="60" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fN-02-I1X">
+                                <rect key="frame" x="113" y="195" width="95" height="30"/>
+                                <state key="normal" title="Arma tu pizza"/>
+                                <connections>
+                                    <segue destination="9v6-sq-R53" kind="show" id="FGg-6S-dHA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="yNM-L9-3Ca"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FQo-Sq-1Le" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1372" y="994"/>
+        </scene>
+        <!--Paso 1-->
+        <scene sceneID="0kg-Bs-WTM">
+            <objects>
+                <viewController title="Paso 1" id="9v6-sq-R53" customClass="StepSizePizzaViewController" customModule="AsiLaQuiero" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FSo-lW-eVz"/>
+                        <viewControllerLayoutGuide type="bottom" id="sjG-pU-fp3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oda-5u-m3H">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Escoja el tamaño de su Pizza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBA-Ep-SQM">
+                                <rect key="frame" x="50" y="85" width="221" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DZl-2Y-sGK">
+                                <rect key="frame" x="0.0" y="139" width="320" height="243"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" adjustable="YES"/>
+                                </accessibility>
+                                <connections>
+                                    <outlet property="dataSource" destination="9v6-sq-R53" id="203-Iz-2j7"/>
+                                    <outlet property="delegate" destination="9v6-sq-R53" id="FTM-5h-5Hm"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCO-me-ntD">
+                                <rect key="frame" x="124" y="468" width="72" height="30"/>
+                                <state key="normal" title="Ir a paso 2"/>
+                                <connections>
+                                    <segue destination="dem-v8-7MT" kind="show" id="3iY-kf-eXJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="pickerSizePizza" destination="DZl-2Y-sGK" id="tZ5-h0-bC2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xkU-54-Yxt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1760" y="994"/>
+        </scene>
+        <!--Paso 2-->
+        <scene sceneID="dxZ-WL-GVj">
+            <objects>
+                <viewController title="Paso 2" id="dem-v8-7MT" customClass="StepTypePizzaViewController" customModule="AsiLaQuiero" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ytd-x4-GzI"/>
+                        <viewControllerLayoutGuide type="bottom" id="pZp-Oc-PMr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ej7-7i-rQV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Escoja el tipo de masa de su Pizza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTE-72-Mq1">
+                                <rect key="frame" x="29" y="85" width="262" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RH9-Tj-423">
+                                <rect key="frame" x="0.0" y="139" width="320" height="243"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="dem-v8-7MT" id="qP3-NY-8As"/>
+                                    <outlet property="delegate" destination="dem-v8-7MT" id="Q0t-NQ-xQA"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Hs-5V-IBr">
+                                <rect key="frame" x="124" y="468" width="72" height="30"/>
+                                <state key="normal" title="Ir a paso 3"/>
+                                <connections>
+                                    <segue destination="s1N-Ye-Ir1" kind="show" id="AaE-wS-7he"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ll9-XU-hEs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2162" y="994"/>
+        </scene>
+        <!--Paso 3-->
+        <scene sceneID="lzD-Ty-Mst">
+            <objects>
+                <viewController title="Paso 3" id="s1N-Ye-Ir1" customClass="StepTypeCheesePizzaViewController" customModule="AsiLaQuiero" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gjq-KN-Fj6"/>
+                        <viewControllerLayoutGuide type="bottom" id="2nQ-7q-dX3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w6K-PH-xc3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voi-Ac-hBL">
+                                <rect key="frame" x="122" y="468" width="76" height="30"/>
+                                <state key="normal" title="Ir al paso 4"/>
+                                <connections>
+                                    <segue destination="tbQ-rd-1vI" kind="show" id="wFN-zn-SFe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Escoja el tipo de queso de su Pizza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Oh-fg-oWb">
+                                <rect key="frame" x="26" y="85" width="268" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gqe-Hc-TId">
+                                <rect key="frame" x="0.0" y="139" width="320" height="243"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="s1N-Ye-Ir1" id="nGX-Mo-JOi"/>
+                                    <outlet property="delegate" destination="s1N-Ye-Ir1" id="KYc-pv-3RS"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ip-VE-ht9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2576" y="994"/>
+        </scene>
+        <!--Paso 4-->
+        <scene sceneID="FLg-BK-Ent">
+            <objects>
+                <viewController title="Paso 4" id="tbQ-rd-1vI" customClass="StepIngredientPizzaViewController" customModule="AsiLaQuiero" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7yx-zX-w7Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="U9M-6i-aA4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wuu-OB-dZW" customClass="UIControl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escoja 4 ingredientes para su Pizza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wh-u7-z3J">
+                                <rect key="frame" x="25" y="85" width="270" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingrediente 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6Y-on-vxI">
+                                <rect key="frame" x="36" y="161" width="99" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AjY-c2-UlJ">
+                                <rect key="frame" x="158" y="157" width="137" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="tbQ-rd-1vI" id="gJO-Qw-6yL"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xdd-Mo-Sh8">
+                                <rect key="frame" x="158" y="214" width="137" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8UE-LT-b4I">
+                                <rect key="frame" x="158" y="269" width="137" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingrediente 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIE-fI-InI">
+                                <rect key="frame" x="34" y="218" width="101" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingrediente 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0D2-IV-Zd8">
+                                <rect key="frame" x="34" y="273" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingrediente 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfJ-mE-JIz">
+                                <rect key="frame" x="34" y="330" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mP8-oU-zNh">
+                                <rect key="frame" x="158" y="327" width="137" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eP-yl-Fti">
+                                <rect key="frame" x="107" y="474" width="106" height="30"/>
+                                <state key="normal" title="Realizar Pedido"/>
+                                <connections>
+                                    <segue destination="VPV-BX-xJ6" kind="show" id="4JQ-Hk-xlM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6wh-u7-z3J" firstAttribute="top" secondItem="7yx-zX-w7Z" secondAttribute="bottom" constant="21" id="2mP-Af-7Lg"/>
+                            <constraint firstItem="uIE-fI-InI" firstAttribute="top" secondItem="B6Y-on-vxI" secondAttribute="bottom" constant="36" id="3hp-v6-kLm"/>
+                            <constraint firstItem="8UE-LT-b4I" firstAttribute="centerY" secondItem="Wuu-OB-dZW" secondAttribute="centerY" id="5H8-8f-Zd6"/>
+                            <constraint firstItem="8UE-LT-b4I" firstAttribute="leading" secondItem="mP8-oU-zNh" secondAttribute="leading" id="7Xx-nM-Jbs"/>
+                            <constraint firstItem="uIE-fI-InI" firstAttribute="leading" secondItem="0D2-IV-Zd8" secondAttribute="leading" id="9Tc-Gs-Lyv"/>
+                            <constraint firstItem="6wh-u7-z3J" firstAttribute="trailing" secondItem="8UE-LT-b4I" secondAttribute="trailing" id="A1I-ZO-R43"/>
+                            <constraint firstItem="uIE-fI-InI" firstAttribute="leading" secondItem="Wuu-OB-dZW" secondAttribute="leadingMargin" constant="18" id="BFt-Ft-qY3"/>
+                            <constraint firstItem="2eP-yl-Fti" firstAttribute="centerX" secondItem="Wuu-OB-dZW" secondAttribute="centerX" id="Dgz-7g-zyU"/>
+                            <constraint firstItem="8UE-LT-b4I" firstAttribute="top" secondItem="Xdd-Mo-Sh8" secondAttribute="bottom" constant="25" id="FG4-eh-tac"/>
+                            <constraint firstItem="6wh-u7-z3J" firstAttribute="trailing" secondItem="AjY-c2-UlJ" secondAttribute="trailing" id="JCv-mx-ISA"/>
+                            <constraint firstItem="6wh-u7-z3J" firstAttribute="trailing" secondItem="Xdd-Mo-Sh8" secondAttribute="trailing" id="JRz-TV-Yqi"/>
+                            <constraint firstItem="AjY-c2-UlJ" firstAttribute="top" secondItem="6wh-u7-z3J" secondAttribute="bottom" constant="51" id="LlL-Rk-cXz"/>
+                            <constraint firstItem="mP8-oU-zNh" firstAttribute="top" secondItem="8UE-LT-b4I" secondAttribute="bottom" constant="28" id="NPg-LT-wxa"/>
+                            <constraint firstItem="uIE-fI-InI" firstAttribute="trailing" secondItem="B6Y-on-vxI" secondAttribute="trailing" id="Rmd-cb-xRJ"/>
+                            <constraint firstItem="2eP-yl-Fti" firstAttribute="centerX" secondItem="Wuu-OB-dZW" secondAttribute="centerX" id="Ska-dq-qC6"/>
+                            <constraint firstItem="Xdd-Mo-Sh8" firstAttribute="centerY" secondItem="uIE-fI-InI" secondAttribute="centerY" id="bhx-NO-Crb"/>
+                            <constraint firstItem="8UE-LT-b4I" firstAttribute="centerY" secondItem="0D2-IV-Zd8" secondAttribute="centerY" id="eBd-xL-5FN"/>
+                            <constraint firstItem="8UE-LT-b4I" firstAttribute="leading" secondItem="Xdd-Mo-Sh8" secondAttribute="leading" id="eKl-OQ-mDb"/>
+                            <constraint firstItem="jfJ-mE-JIz" firstAttribute="baseline" secondItem="mP8-oU-zNh" secondAttribute="baseline" id="h9Y-Ja-qLA"/>
+                            <constraint firstItem="uIE-fI-InI" firstAttribute="leading" secondItem="jfJ-mE-JIz" secondAttribute="leading" id="ksf-vS-dWb"/>
+                            <constraint firstItem="U9M-6i-aA4" firstAttribute="top" secondItem="2eP-yl-Fti" secondAttribute="bottom" constant="64" id="mAT-ks-0y5"/>
+                            <constraint firstItem="Xdd-Mo-Sh8" firstAttribute="leading" secondItem="uIE-fI-InI" secondAttribute="trailing" constant="23" id="qgI-UP-sb3"/>
+                            <constraint firstItem="Xdd-Mo-Sh8" firstAttribute="leading" secondItem="AjY-c2-UlJ" secondAttribute="leading" id="t7n-jg-H0Z"/>
+                            <constraint firstItem="2eP-yl-Fti" firstAttribute="centerX" secondItem="6wh-u7-z3J" secondAttribute="centerX" id="tFo-0f-Did"/>
+                            <constraint firstItem="8UE-LT-b4I" firstAttribute="trailing" secondItem="mP8-oU-zNh" secondAttribute="trailing" id="xu0-JL-9dn"/>
+                        </constraints>
+                        <connections>
+                            <action selector="backgroundTap:" destination="tbQ-rd-1vI" eventType="touchDown" id="AxU-l3-gS4"/>
+                        </connections>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="pickerTextFieldIng1" destination="AjY-c2-UlJ" id="HsX-GI-GnH"/>
+                        <outlet property="pickerTextFieldIng2" destination="Xdd-Mo-Sh8" id="kDx-ik-fqd"/>
+                        <outlet property="pickerTextFieldIng3" destination="8UE-LT-b4I" id="ka2-rE-PKw"/>
+                        <outlet property="pickerTextFieldIng4" destination="mP8-oU-zNh" id="yOc-Qr-xNk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xXk-ml-Xuf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2964" y="994"/>
+        </scene>
+        <!--Realizar Pedido-->
+        <scene sceneID="AYZ-Aj-ccR">
+            <objects>
+                <viewController title="Realizar Pedido" id="VPV-BX-xJ6" customClass="RealizarPedidoViewController" customModule="AsiLaQuiero" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TLO-Fv-zra"/>
+                        <viewControllerLayoutGuide type="bottom" id="78r-C7-Uav"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DOe-mP-tJW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Resumen de la Pizza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAG-BX-W32">
+                                <rect key="frame" x="81" y="84" width="158" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tamaño" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jee-qK-zlu">
+                                <rect key="frame" x="24" y="136" width="61" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Masa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DyG-sY-1ZW">
+                                <rect key="frame" x="25" y="171" width="41" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Queso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yiR-F7-A8L">
+                                <rect key="frame" x="24" y="207" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingrediente 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnS-HM-gc9">
+                                <rect key="frame" x="25" y="261" width="99" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingrediente 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xru-hI-pjN">
+                                <rect key="frame" x="23" y="295" width="101" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingrediente 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rae-zl-OSs">
+                                <rect key="frame" x="22" y="331" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingrediente 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wf3-VX-Fhb">
+                                <rect key="frame" x="22" y="366" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXQ-q6-L2m">
+                                <rect key="frame" x="173" y="136" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pu9-c2-TXM">
+                                <rect key="frame" x="173" y="171" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQ8-k2-kCa">
+                                <rect key="frame" x="173" y="207" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OsJ-iy-SpO">
+                                <rect key="frame" x="173" y="261" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obq-ge-6C2">
+                                <rect key="frame" x="173" y="295" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OII-7C-Giy">
+                                <rect key="frame" x="173" y="331" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="os1-G8-BOO">
+                                <rect key="frame" x="173" y="366" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yId-mU-ZC6">
+                                <rect key="frame" x="101" y="454" width="119" height="30"/>
+                                <state key="normal" title="Mandar a cocinar"/>
+                                <connections>
+                                    <action selector="cocinar:" destination="VPV-BX-xJ6" eventType="touchUpInside" id="zgj-Ye-qYX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="lblCheesePizza" destination="UQ8-k2-kCa" id="jBP-Tm-EEZ"/>
+                        <outlet property="lblIng1Pizza" destination="OsJ-iy-SpO" id="Zps-h7-dfr"/>
+                        <outlet property="lblIng2Pizza" destination="obq-ge-6C2" id="Oln-91-aCx"/>
+                        <outlet property="lblIng3Pizza" destination="OII-7C-Giy" id="xZH-3X-r7q"/>
+                        <outlet property="lblIng4Pizza" destination="os1-G8-BOO" id="rvo-3j-8yy"/>
+                        <outlet property="lblMasaPizza" destination="pu9-c2-TXM" id="Lze-Qs-UN2"/>
+                        <outlet property="lblSizePizza" destination="sXQ-q6-L2m" id="G7N-Um-WsT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oc2-D5-Jd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3385" y="994"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wG8-y7-1BA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mvv-dN-qI9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pTC-Do-HUW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hsz-q7-1Zl" kind="relationship" relationship="rootViewController" id="Do6-4X-qGo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fka-7b-hUD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="831" y="978"/>
+        </scene>
+    </scenes>
+</document>
